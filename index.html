@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Автосервис на Революционной | Честный ремонт в Самаре</title>
-  <meta name="description" content="Премиальное качество ремонта авто без наценок и переплат. Самара, Революционная 113а.">
-  
+  <meta name="description"
+    content="Премиальное качество ремонта авто без наценок и переплат. Самара, Революционная 113а.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Unbounded:wght@400;600;800&display=swap"
+    rel="stylesheet">
+
   <style>
     :root {
       /* Colors */
@@ -18,10 +22,10 @@
       --bg-surface-elevated: #27272a;
       --border-light: rgba(255, 255, 255, 0.08);
       --border-hover: rgba(255, 107, 0, 0.5);
-      
+
       --text-main: #fafafa;
       --text-muted: #a1a1aa;
-      
+
       --primary: #ff6b00;
       --primary-hover: #e56000;
       --primary-glow: rgba(255, 107, 0, 0.15);
@@ -89,29 +93,47 @@
     }
 
     /* Typography */
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
       font-family: var(--font-display);
       font-weight: 600;
       line-height: 1.1;
     }
 
-    h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; letter-spacing: -0.02em; }
-    h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 3rem; }
-    h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-    
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 3rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
     .text-gradient {
       background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    
+
     .text-primary-gradient {
       background: linear-gradient(135deg, #ff6b00 0%, #ff9547 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    p { color: var(--text-muted); font-size: 1.1rem; }
+    p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
 
     /* Buttons */
     .btn {
@@ -143,14 +165,14 @@
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       color: var(--text-main);
       border: 1px solid var(--border-light);
       backdrop-filter: blur(10px);
     }
 
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       border-color: var(--text-muted);
       transform: translateY(-2px);
     }
@@ -164,11 +186,13 @@
       transform: translateX(-50%);
       z-index: 100;
       width: calc(100% - 48px);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     }
 
     @media (max-width: 768px) {
-      .sticky-cta { display: flex; }
+      .sticky-cta {
+        display: flex;
+      }
     }
 
     /* Sections */
@@ -189,9 +213,17 @@
       gap: 24px;
     }
 
-    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
 
     .card {
       background: var(--bg-surface);
@@ -206,19 +238,25 @@
     .card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255,255,255,0.06), transparent 40%);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255, 255, 255, 0.06), transparent 40%);
       opacity: 0;
       transition: opacity 0.3s;
       z-index: 1;
       pointer-events: none;
     }
 
-    .card:hover::before { opacity: 1; }
+    .card:hover::before {
+      opacity: 1;
+    }
+
     .card:hover {
       border-color: var(--border-hover);
       transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
 
     .card-icon {
@@ -233,12 +271,17 @@
       margin-bottom: 1.5rem;
     }
 
-    .card-icon svg { width: 24px; height: 24px; }
+    .card-icon svg {
+      width: 24px;
+      height: 24px;
+    }
 
     /* Component: Navbar */
     .navbar {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       padding: 1.5rem 0;
       z-index: 1000;
       background: rgba(9, 9, 11, 0.7);
@@ -264,7 +307,8 @@
     }
 
     .logo-dot {
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       background: var(--primary);
       border-radius: 50%;
       box-shadow: 0 0 10px var(--primary);
@@ -278,7 +322,9 @@
       transition: color 0.3s;
     }
 
-    .nav-phone:hover { color: var(--primary); }
+    .nav-phone:hover {
+      color: var(--primary);
+    }
 
     /* Section: Hero */
     .hero {
@@ -329,7 +375,9 @@
       margin-bottom: 0.25rem;
     }
 
-    .stat-item p { font-size: 0.875rem; }
+    .stat-item p {
+      font-size: 0.875rem;
+    }
 
     /* Section: Pain Points */
     .pain-card {
@@ -341,7 +389,7 @@
       gap: 1.5rem;
       align-items: flex-start;
     }
-    
+
     .pain-icon {
       color: #ef4444;
       flex-shrink: 0;
@@ -358,14 +406,17 @@
       align-items: center;
     }
 
-    .benefits-content { flex: 1; }
+    .benefits-content {
+      flex: 1;
+    }
+
     .benefits-image {
       flex: 1;
       border-radius: var(--radius-md);
       overflow: hidden;
       position: relative;
     }
-    
+
     .benefits-image img {
       width: 100%;
       height: auto;
@@ -399,7 +450,7 @@
       margin-top: 1rem;
       font-weight: 600;
       color: var(--text-main);
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       padding: 0.25rem 0.75rem;
       border-radius: var(--radius-sm);
     }
@@ -457,10 +508,10 @@
       gap: 2rem;
       margin-top: 4rem;
     }
-    
+
     .contact-item {
       padding: 2rem;
-      background: rgba(255,255,255,0.02);
+      background: rgba(255, 255, 255, 0.02);
       border: 1px solid var(--border-light);
       border-radius: var(--radius-md);
       display: flex;
@@ -478,7 +529,9 @@
       transition: color 0.3s;
     }
 
-    .contact-item a:hover { color: var(--primary); }
+    .contact-item a:hover {
+      color: var(--primary);
+    }
 
     footer {
       border-top: 1px solid var(--border-light);
@@ -499,18 +552,37 @@
     }
 
     @media (max-width: 992px) {
-      .benefits-wrapper { flex-direction: column; padding: 2rem; }
-      .contact-grid { grid-template-columns: 1fr; }
+      .benefits-wrapper {
+        flex-direction: column;
+        padding: 2rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 768px) {
-      .hero-stats { flex-direction: column; gap: 1.5rem; }
-      .hero-buttons { flex-direction: column; }
-      .btn { width: 100%; }
-      section { padding: 5rem 0; }
+      .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      section {
+        padding: 5rem 0;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navigation -->
@@ -526,7 +598,11 @@
 
   <!-- Sticky Mobile Button -->
   <a href="tel:+79272602541" class="btn btn-primary sticky-cta">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path
+        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
     Позвонить сейчас
   </a>
 
@@ -536,9 +612,10 @@
       <div class="hero-content reveal">
         <h1>Возвращаем вашему авто <span class="text-primary-gradient">заводскую надежность</span></h1>
         <p style="margin-top: 1.5rem; font-size: 1.25rem; max-width: 600px;">
-          Чиним то, от чего отказываются другие. Без скрытых наценок, с прозрачной сметой до начала работ и гарантией на результат.
+          Чиним то, от чего отказываются другие. Без скрытых наценок, с прозрачной сметой до начала работ и гарантией на
+          результат.
         </p>
-        
+
         <div class="hero-buttons">
           <a href="#contacts" class="btn btn-primary">Получить расчет стоимости</a>
           <a href="#services" class="btn btn-secondary">Наши услуги</a>
@@ -569,11 +646,16 @@
         <h2>Знакомые ситуации?</h2>
         <p>К нам часто приезжают после других СТО, потому что устали от типичных проблем автобизнеса.</p>
       </div>
-      
+
       <div class="grid grid-3 reveal">
         <div class="pain-card">
           <div class="pain-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+              <path d="M12 9v4" />
+              <path d="M12 17h.01" />
+            </svg>
           </div>
           <div>
             <h3>Цена растет в процессе</h3>
@@ -582,7 +664,12 @@
         </div>
         <div class="pain-card">
           <div class="pain-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+              <path d="M12 9v4" />
+              <path d="M12 17h.01" />
+            </svg>
           </div>
           <div>
             <h3>Стук остался, деньги ушли</h3>
@@ -591,7 +678,12 @@
         </div>
         <div class="pain-card">
           <div class="pain-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+              <path d="M12 9v4" />
+              <path d="M12 17h.01" />
+            </svg>
           </div>
           <div>
             <h3>Долгое ожидание</h3>
@@ -608,29 +700,43 @@
       <div class="benefits-wrapper">
         <div class="benefits-content">
           <h2 class="text-gradient">Мы работаем иначе</h2>
-          <p>Наш подход радикально отличается. Мы строим отношения на доверии: вы знаете, за что платите, и уверены в качестве.</p>
-          
+          <p>Наш подход радикально отличается. Мы строим отношения на доверии: вы знаете, за что платите, и уверены в
+            качестве.</p>
+
           <ul class="benefits-list">
             <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               Железная смета до старта работ
             </li>
             <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               Сохраняем старые детали для подтверждения
             </li>
             <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               Доступ в ремзону для личного контроля
             </li>
             <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               Гарантия на все виды слесарных работ
             </li>
           </ul>
         </div>
         <div class="benefits-image">
-          <img src="https://images.unsplash.com/photo-1611016186353-9af58c69a533?q=80&w=1000&auto=format&fit=crop" alt="Механик за работой в Автосервисе на Революционной">
+          <img src="https://images.unsplash.com/photo-1611016186353-9af58c69a533?q=80&w=1000&auto=format&fit=crop"
+            alt="Механик за работой в Автосервисе на Революционной">
         </div>
       </div>
     </div>
@@ -647,16 +753,25 @@
       <div class="grid grid-3">
         <div class="card reveal">
           <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l2-9 5 18 2-9h5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M2 12h4l2-9 5 18 2-9h5" />
+            </svg>
           </div>
           <h3>Компьютерная диагностика</h3>
           <p>Точно определим причину "Check Engine" и других ошибок дилерскими сканерами.</p>
           <span class="price-tag">От 800 ₽</span>
         </div>
-        
+
         <div class="card reveal">
           <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="4" />
+              <line x1="21.17" y1="8" x2="12" y2="8" />
+              <line x1="3.95" y1="6.06" x2="8.54" y2="14" />
+            </svg>
           </div>
           <h3>Ремонт ходовой</h3>
           <p>Замена рычагов, сайлентблоков, амортизаторов. Устраним стук и вернем управляемость.</p>
@@ -665,7 +780,11 @@
 
         <div class="card reveal">
           <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </svg>
           </div>
           <h3>Техобслуживание (ТО)</h3>
           <p>Замена масел, фильтров, свечей и колодок. Расходники в наличии.</p>
@@ -674,7 +793,14 @@
 
         <div class="card reveal">
           <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M4 10v-3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/><path d="M12 4v16"/><path d="M8 4v16"/><path d="M16 4v16"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M4 14v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7" />
+              <path d="M4 10v-3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3" />
+              <path d="M12 4v16" />
+              <path d="M8 4v16" />
+              <path d="M16 4v16" />
+            </svg>
           </div>
           <h3>Ремонт двигателя</h3>
           <p>От замены ремня ГРМ до капитального ремонта ДВС с гарантией.</p>
@@ -683,7 +809,10 @@
 
         <div class="card reveal">
           <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m13 2-2 2.5-4 10.5h6l-2 7 9-11.5h-5z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="m13 2-2 2.5-4 10.5h6l-2 7 9-11.5h-5z" />
+            </svg>
           </div>
           <h3>Автоэлектрика</h3>
           <p>Ремонт стартеров, генераторов, проводки. Установка доп. оборудования.</p>
@@ -692,7 +821,11 @@
 
         <div class="card reveal">
           <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+            </svg>
           </div>
           <h3>Шиномонтаж</h3>
           <p>Балансировка, правка дисков, сезонная переобувка без очередей по записи.</p>
@@ -713,17 +846,20 @@
       <div class="grid grid-3">
         <div class="card reveal">
           <div style="color: #fbbf24; margin-bottom: 1rem;">★★★★★</div>
-          <p>"Объездил три сервиса со стуком в подвеске, все приговаривали рейку. Ребята на Революционной нашли разболтанный сайлентблок за 5 минут. Поменяли, стук ушел. Сэкономил 30 тысяч. Спасибо!"</p>
+          <p>"Объездил три сервиса со стуком в подвеске, все приговаривали рейку. Ребята на Революционной нашли
+            разболтанный сайлентблок за 5 минут. Поменяли, стук ушел. Сэкономил 30 тысяч. Спасибо!"</p>
           <h4 style="margin-top: 1.5rem; font-family: var(--font-body); font-size: 1rem;">Алексей С., Самара</h4>
         </div>
         <div class="card reveal">
           <div style="color: #fbbf24; margin-bottom: 1rem;">★★★★★</div>
-          <p>"Делала большое ТО с заменой ремня ГРМ. Очень понравилось, что все запчасти мастера заказали сами, по ценам даже дешевле, чем я смотрела на Экзисте. Все старые детали сложили в багажник."</p>
+          <p>"Делала большое ТО с заменой ремня ГРМ. Очень понравилось, что все запчасти мастера заказали сами, по ценам
+            даже дешевле, чем я смотрела на Экзисте. Все старые детали сложили в багажник."</p>
           <h4 style="margin-top: 1.5rem; font-family: var(--font-body); font-size: 1rem;">Елена М.</h4>
         </div>
         <div class="card reveal">
           <div style="color: #fbbf24; margin-bottom: 1rem;">★★★★★</div>
-          <p>"Живу рядом. Обслуживаю здесь уже вторую машину. Никогда не было попыток 'развести' на ненужные работы. Если что-то еще походит год - так и говорят. Рекомендую как честных ребят."</p>
+          <p>"Живу рядом. Обслуживаю здесь уже вторую машину. Никогда не было попыток 'развести' на ненужные работы.
+            Если что-то еще походит год - так и говорят. Рекомендую как честных ребят."</p>
           <h4 style="margin-top: 1.5rem; font-family: var(--font-body); font-size: 1rem;">Дмитрий В.</h4>
         </div>
       </div>
@@ -741,40 +877,56 @@
         <div class="faq-item">
           <button class="faq-question">
             Даете ли вы гарантию на ремонт?
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
           </button>
           <div class="faq-answer">
-            <p>Да, мы предоставляем официальную гарантию на все выполненные слесарные работы сроком до 12 месяцев. Также действует гарантия на оригинальные запчасти, купленные через наш сервис.</p>
+            <p>Да, мы предоставляем официальную гарантию на все выполненные слесарные работы сроком до 12 месяцев. Также
+              действует гарантия на оригинальные запчасти, купленные через наш сервис.</p>
           </div>
         </div>
-        
+
         <div class="faq-item">
           <button class="faq-question">
             Могу ли я присутствовать в ремзоне?
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
           </button>
           <div class="faq-answer">
-            <p>Конечно. Мы приветствуем прозрачность. Вы можете находиться рядом с автомобилем (при соблюдении правил техники безопасности), а наш механик покажет и объяснит все найденные неисправности.</p>
+            <p>Конечно. Мы приветствуем прозрачность. Вы можете находиться рядом с автомобилем (при соблюдении правил
+              техники безопасности), а наш механик покажет и объяснит все найденные неисправности.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
             У вас есть запчасти в наличии?
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
           </button>
           <div class="faq-answer">
-            <p>Самые ходовые расходники (масла, фильтры, колодки на популярные модели) всегда в наличии. Сложные узлы и агрегаты мы доставляем с нашего партнерского склада в течение 2-4 часов.</p>
+            <p>Самые ходовые расходники (масла, фильтры, колодки на популярные модели) всегда в наличии. Сложные узлы и
+              агрегаты мы доставляем с нашего партнерского склада в течение 2-4 часов.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question">
             Как происходит оплата?
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
           </button>
           <div class="faq-answer">
-            <p>Вы оплачиваете ремонт только после полной проверки автомобиля и подписания акта выполненных работ. Принимаем наличные, банковские карты и переводы.</p>
+            <p>Вы оплачиваете ремонт только после полной проверки автомобиля и подписания акта выполненных работ.
+              Принимаем наличные, банковские карты и переводы.</p>
           </div>
         </div>
       </div>
@@ -786,24 +938,36 @@
     <div class="container reveal">
       <h2>Готовы вернуть машине идеальный ход?</h2>
       <p style="margin-bottom: 3rem;">Позвоните нам или приезжайте на бесплатный осмотр ходовой части.</p>
-      
+
       <a href="tel:+79272602541" class="btn btn-primary" style="font-size: 1.25rem; padding: 1.25rem 3rem;">
         Позвонить: +7 (927) 260-25-41
       </a>
 
       <div class="contact-grid">
         <div class="contact-item">
-          <div class="card-icon" style="margin-bottom: 1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="card-icon" style="margin-bottom: 1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
           <p>Адрес</p>
           <span>Революционная улица, 113а<br>Октябрьский район, Самара</span>
         </div>
         <div class="contact-item">
-          <div class="card-icon" style="margin-bottom: 1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="card-icon" style="margin-bottom: 1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg></div>
           <p>Время работы</p>
           <span>Ежедневно<br>с 08:00 до 22:00</span>
         </div>
         <div class="contact-item">
-          <div class="card-icon" style="margin-bottom: 1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="card-icon" style="margin-bottom: 1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg></div>
           <p>Телефон</p>
           <a href="tel:+79272602541">+7 (927) 260-25-41</a>
         </div>
@@ -822,13 +986,13 @@
   <script>
     // Scroll reveal animation
     const revealElements = document.querySelectorAll('.reveal');
-    
+
     const revealOptions = {
       threshold: 0.15,
       rootMargin: "0px 0px -50px 0px"
     };
 
-    const revealObserver = new IntersectionObserver(function(entries, observer) {
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add('active');
@@ -840,13 +1004,13 @@
 
     // Cards hover glow effect (Linear style)
     const cards = document.querySelectorAll('.card');
-    
+
     cards.forEach(card => {
       card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         card.style.setProperty('--mouse-x', `${x}px`);
         card.style.setProperty('--mouse-y', `${y}px`);
       });
@@ -854,13 +1018,13 @@
 
     // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
-    
+
     faqItems.forEach(item => {
       const question = item.querySelector('.faq-question');
-      
+
       question.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
-        
+
         // Close all
         faqItems.forEach(faq => {
           faq.classList.remove('active');
@@ -877,4 +1041,5 @@
     });
   </script>
 </body>
+
 </html>
